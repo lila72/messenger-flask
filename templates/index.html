@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Личный мессенджер</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="auth">
+    <h2>Авторизация</h2>
+    <input type="text" id="login" placeholder="Логин">
+    <input type="password" id="password" placeholder="Пароль">
+    <button onclick="register()">Регистрация</button>
+    <button onclick="login()">Войти</button>
+  </div>
+
+  <div id="chat" style="display:none;">
+    <h2>Привет, <span id="user"></span></h2>
+    <input id="search" placeholder="Поиск пользователей..." oninput="searchUsers()">
+    <div id="results"></div>
+    <h3>Контакты</h3>
+    <ul id="contacts"></ul>
+    <div id="messages"></div>
+    <input id="messageInput" placeholder="Введите сообщение">
+    <button onclick="sendMessage()">Отправить</button>
+  </div>
+
+<script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
